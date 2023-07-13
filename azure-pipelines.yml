@@ -1,3 +1,10 @@
-pool: MyAgentPool
-steps:
-- bash: echo hello world
+
+- main
+
+vmImage: uibuntu-latest
+
+variables:
+    buildConfiguration: 'Release'
+
+- script: dtonet build --configuration $(buildConfiguration)
+displayName: 'dotnet build $(buildConfiguration)'
