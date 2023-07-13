@@ -1,10 +1,10 @@
 
 - main
 
-vmImage: uibuntu-latest
+  name: Default
 
 variables:
-    buildConfiguration: 'Release'
+  buildConfiguration: 'Release'
 
 - script: dtonet build --configuration $(buildConfiguration)
-displayName: 'dotnet build $(buildConfiguration)'
+  displayName: 'dotnet build $(buildConfiguration)'
